@@ -7,8 +7,8 @@ class Util {
 
   Future<UserEntity> parseJsonConfig(String rawJson) async {
     final Map<String, dynamic> parsed = await compute(decodeJsonWithCompute, rawJson);
-    final mobileAdsEntity = UserEntity.fromJson(parsed);
-    return mobileAdsEntity;
+    final userEntity = UserEntity.fromJson(parsed);
+    return userEntity;
   }
 
   static Map<String, dynamic> decodeJsonWithCompute(String rawJson) {
